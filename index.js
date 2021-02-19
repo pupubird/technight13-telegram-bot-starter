@@ -15,6 +15,15 @@ bot.command("/test", (ctx) => {
 bot.on("text", (ctx) => {
   console.log(ctx.message);
   // All your logic here, you can have a machine learning model to listen on this message and reply
+  let message = ctx.message.text;
+  if (message.includes("images")) {
+    ctx.replyWithPhoto({
+      url: "https://picsum.photos/200/300/?random",
+      filename: "random.jpg",
+    });
+    ctx.reply("Here is a random image!");
+    return;
+  }
   ctx.reply("Echoing your message:" + ctx.message.text);
 });
 
