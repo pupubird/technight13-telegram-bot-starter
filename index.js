@@ -26,6 +26,5 @@ bot.on("text", (ctx) => {
   }
   ctx.reply("Echoing your message:" + ctx.message.text);
 });
-
 console.log("Bot listening commands");
 bot.launch();
