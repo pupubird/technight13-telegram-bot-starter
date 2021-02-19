@@ -18,7 +18,7 @@ bot.on("text", (ctx) => {
   let message = ctx.message.text;
   if (message.includes("images")) {
     ctx.replyWithPhoto({
-      url: "https://picsum.photos/200/300/?random",
+      source: "./photos/smartmockups_klbs5ebo.jpg",
       filename: "random.jpg",
     });
     ctx.reply("Here is a random image!");
